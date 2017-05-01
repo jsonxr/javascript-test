@@ -1,0 +1,72 @@
+<html>
+<head>
+  <style>
+  table {
+    border-collapse: collapse;
+  }
+  table, td, th {
+    border: 1px solid black;
+  }
+  td, th {
+    text-align: center;
+    width: 3em;
+  }
+  </style>
+  <script src="js/fib.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
+  <script>
+    function doit() {
+      const n = document.getElementById('n').value;
+      const result = fib(n);
+      document.getElementById('answer').textContent = result;
+    }
+  </script>
+</head>
+<body>
+  <h1>Fibonnaci Sequence</h1>
+  <table>
+    <tr>
+      <th>n</th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+      <th>...</th>
+    </tr>
+    <tr>
+      <td>fib(n)</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>5</td>
+      <td>8</td>
+      <td>13</td>
+      <td>21</td>
+      <td>34</td>
+      <td>55</td>
+      <td>89</td>
+      <td>144</td>
+      <td>...</td>
+    </tr>
+  </table>
+
+  <p>
+    <form>
+      n = <input id="n"> <input type="submit" onclick="doit(); return false;">
+    </form>
+    <h1>Answer: <span id="answer"></span></h1>
+  </p>
+
+</body>
+</html>
