@@ -28,8 +28,16 @@
 |   12   |   144  |
 ...
 */
+var memo = [0,1];
 function fib(n) {
-  return 0;
+  if (memo[n] !== undefined) {
+    return memo[n];
+  }
+  else {
+    var res = fib(n-1) + fib(n-2);
+    memo[n] = res;
+    return memo[n];
+  }
 }
 
 
@@ -61,4 +69,5 @@ assertEqual(fib(9), 34);
 assertEqual(fib(10), 55);
 assertEqual(fib(11), 89);
 assertEqual(fib(12), 144);
+assertEqual(fib(50), 144);
 console.log('Success!');

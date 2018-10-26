@@ -7,7 +7,6 @@ Fill in the body of the fibonnaci function.  There are assertions defined at the
     node public/js/fib.js
 
 
-
 # 2) Make an angular form
 
 * Prevent submitting until "n" is a valid number between 0 and 50
